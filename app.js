@@ -120,3 +120,18 @@ function calculateApples() {
     const totalPrice = appleQuestion6 * applePrice;
     resultQuestion6.innerHTML = `O preço total é R$ ${totalPrice.toFixed(2)}`;
 }
+
+function checkOrder() {
+    const numberAQuestion7 = Number(document.getElementById("number-a-question-7").value);
+    const numberBQuestion7 = Number(document.getElementById("number-b-question-7").value);
+    const resultQuestion7 = document.getElementById("result-question-7");
+    if (numberAQuestion7 < numberBQuestion7) {
+        resultQuestion7.innerHTML = `Os números em ordem crescente ficam: ${numberAQuestion7}, ${numberBQuestion7}`;
+    }
+    else if (numberAQuestion7 > numberBQuestion7) {
+        resultQuestion7.innerHTML = `Os números em ordem crescente ficam: ${numberBQuestion7}, ${numberAQuestion7}`;
+    }
+    else {
+        resultQuestion7.innerHTML = "Os números não podem ser iguais";
+    }
+}
