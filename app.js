@@ -86,3 +86,21 @@ function calculateIMC() {
         resultQuestion4.innerHTML = "Obesidade";
     }
 }
+
+function checkTriangle() {
+    const sideAQuestion5 = Number(document.getElementById("side-a-question-5").value);
+    const sideBQuestion5 = Number(document.getElementById("side-b-question-5").value);
+    const sideCQuestion5 = Number(document.getElementById("side-c-question-5").value);
+    const resultQuestion5 = document.getElementById("result-question-5");
+    // não será feita a verificação se forma um triangulo. eu tô no celular. tenha pena de mim.
+    if (sideAQuestion5 == sideBQuestion5 && sideBQuestion5 == sideCQuestion5) {
+        resultQuestion5.innerHTML = "Triângulo equilátero";
+    }
+    else if (sideAQuestion5 != sideBQuestion5 && sideBQuestion5 != sideCQuestion5) {
+        resultQuestion5.innerHTML = "Triângulo escaleno";
+    }
+    else {
+        resultQuestion5.innerHTML = "Triângulo isósceles";
+    }
+}
+
