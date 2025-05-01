@@ -232,3 +232,47 @@ function calculateFactorial() {
         resultQuestion13.innerHTML = `O fatorial de ${numberQuestion13} é ${factorial}`;
     }
 }
+
+function calculateFibonacci() {
+    const resultQuestion14 = document.getElementById("result-question-14");
+    const numberListQuestion14 = document.getElementById("number-list-question-14");
+    let fibonacci = [0, 1];
+    for(let i = 2; i < 10; i++) {
+        fibonacci[i] = fibonacci[i - 1] + fibonacci[i - 2];
+    }
+    resultQuestion14.innerHTML ="Os 10 primeiros números da sequência de Fibonacci são: ";
+    numberListQuestion14.innerHTML = fibonacci.join(", ");
+}
+
+function printTop10() {
+    const medal = `                                                  
+                                                  
+      ##      ####                ##        ##    
+      ####      ##              ####      ##      
+        ##        ##            ##      ####      
+          ##      ####        ##        ##        
+          ####      ##      ####      ####        
+            ##              ##      ####          
+              ##          ##        ##            
+              ####      ####      ##              
+                ##  ################              
+                ##################                
+                ####################              
+              ########      ##########            
+              ########      ##########            
+            ############    ##########            
+            ############    ##########            
+              ##########    ##########            
+              ##########    ##########            
+              ######################              
+                ####################              
+                  ##############                  
+                        ####                      
+                                                  
+`
+    const top10 = true
+    while (top10) {                                            
+    console.log(medal);
+    console.log("Parabéns! Você chegou ao final do desafio!");
+    }
+}
