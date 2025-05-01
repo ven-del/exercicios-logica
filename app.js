@@ -43,8 +43,8 @@ function checkScore() {
     }
 }
 
-const seeTheConsole = document.getElementById("see-the-console");
-seeTheConsole.innerHTML = "Este texto foi gerado pelo JavaScript. Abra o console e depois clique no botão abaixo para iniciar.";
+const idQuestion3 = document.getElementById("id-question-3");
+idQuestion3.innerHTML = "Este texto foi gerado pelo JavaScript. Abra o console e depois clique no botão abaixo para iniciar.";
 
 function consoleMenu() {
     console.log("Menu: \n1 - Opção 1 \n2 - Opção 2 \n3 - Opção 3 \n4 - Sair");
@@ -68,3 +68,21 @@ function consoleMenu() {
     }
 }
 
+function calculateIMC() {
+    const weightQuestion4 = Number(document.getElementById("weight-question-4").value);
+    const heightQuestion4 = Number(document.getElementById("height-question-4").value) / 100;
+    const resultQuestion4 = document.getElementById("result-question-4");
+    const imc = weightQuestion4 / (heightQuestion4 * heightQuestion4);
+    if (imc < 18) {
+        resultQuestion4.innerHTML = "Abaixo do peso";
+    }
+    else if (imc >= 18 && imc < 24) {
+        resultQuestion4.innerHTML = "Peso normal";
+    }
+    else if (imc >= 25 && imc < 29) {
+        resultQuestion4.innerHTML = "Sobrepeso";
+    }
+    else {
+        resultQuestion4.innerHTML = "Obesidade";
+    }
+}
