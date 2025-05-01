@@ -159,3 +159,22 @@ function printNumber() {
         resultQuestion9.innerHTML = output;
     }
 }
+
+function calculateSum() {
+    // precisava mesmo de um for pra isso?
+    const arrayQuestion10 = []
+    const numberAQuestion10 = Number(document.getElementById("number-a-question-10").value);
+    const numberBQuestion10 = Number(document.getElementById("number-b-question-10").value);
+    const numberCQuestion10 = Number(document.getElementById("number-c-question-10").value);
+    const numberDQuestion10 = Number(document.getElementById("number-d-question-10").value);
+    const numberEQuestion10 = Number(document.getElementById("number-e-question-10").value);
+    const resultQuestion10 = document.getElementById("result-question-10");
+
+    arrayQuestion10.push(numberAQuestion10, numberBQuestion10, numberCQuestion10, numberDQuestion10, numberEQuestion10);
+    sumQuestion10 = 0;
+    for (let i = 0; i < arrayQuestion10.length; i++) {
+        sumQuestion10 += arrayQuestion10[i];
+    }
+
+    resultQuestion10.innerHTML = `A soma dos números é ${sumQuestion10}`;
+}
