@@ -4,7 +4,7 @@ function parOuImpar() {
     numberQuestion0 % 2 == 0 ? resultQuestion0.innerHTML = `O número  ${numberQuestion0} é par.` : resultQuestion0.innerHTML = `O número ${numberQuestion0} é ímpar`;
 }
 
-window.parOuImpar = parOuImpar;
+
 
 function checkAge() {
     const numberQuestion1 = Number(document.getElementById("number-question-1").value);
