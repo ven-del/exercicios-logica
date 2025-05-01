@@ -145,3 +145,17 @@ function countdownFrom10() {
     }
 }
 
+function printNumber() {
+    const numberQuestion9 = Number(document.getElementById("number-question-9").value);
+    const resultQuestion9 = document.getElementById("result-question-9");
+    if (numberQuestion9 < 0) {
+        resultQuestion9.innerHTML = "Número inválido";
+    }
+    else {
+        output = "";
+        for (let i = 0; i <= 10; i++) {
+            output += `${numberQuestion9}<br>`;
+        }
+        resultQuestion9.innerHTML = output;
+    }
+}
