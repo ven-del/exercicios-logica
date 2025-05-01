@@ -1,3 +1,8 @@
+const checkTheConsole = document.querySelectorAll(".check-the-console");
+checkTheConsole.forEach(element => {
+    element.innerHTML = "Este texto foi gerado pelo JavaScript. Abra o console e depois clique no botão abaixo para iniciar.";
+});
+
 function parOuImpar() {
     const numberQuestion0 = Number(document.getElementById("number-question-0").value);
     const resultQuestion0 = document.getElementById("result-question-0");
@@ -42,9 +47,6 @@ function checkScore() {
         resultQuestion2.innerHTML = "Aprovado";
     }
 }
-
-const idQuestion3 = document.getElementById("id-question-3");
-idQuestion3.innerHTML = "Este texto foi gerado pelo JavaScript. Abra o console e depois clique no botão abaixo para iniciar.";
 
 function consoleMenu() {
     console.log("Menu: \n1 - Opção 1 \n2 - Opção 2 \n3 - Opção 3 \n4 - Sair");
@@ -135,3 +137,11 @@ function checkOrder() {
         resultQuestion7.innerHTML = "Os números não podem ser iguais";
     }
 }
+
+
+function countdownFrom10() {
+    for (let i = 10; i >= 0 ; i--) {
+        console.log(i);
+    }
+}
+
