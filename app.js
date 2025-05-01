@@ -104,3 +104,19 @@ function checkTriangle() {
     }
 }
 
+function calculateApples() {
+    const appleQuestion6 = Number(document.getElementById("apple-question-6").value);
+    const resultQuestion6 = document.getElementById("result-question-6");
+    let  applePrice;
+    if (appleQuestion6 <= 0) {
+        resultQuestion6.innerHTML = "Compre ao menos uma maçã!";
+    }
+    else if (appleQuestion6 < 12) {
+        applePrice = .30;
+    }
+    else {
+        applePrice = .25;
+    }
+    const totalPrice = appleQuestion6 * applePrice;
+    resultQuestion6.innerHTML = `O preço total é R$ ${totalPrice.toFixed(2)}`;
+}
