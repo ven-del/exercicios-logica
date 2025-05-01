@@ -178,3 +178,20 @@ function calculateSum() {
 
     resultQuestion10.innerHTML = `A soma dos números é ${sumQuestion10}`;
 }
+
+function printMultiplicationTable() {
+    const numberQuestion11 = Number(document.getElementById("number-question-11").value);
+    const resultQuestion11 = document.getElementById("result-question-11");
+    const numberListQuestion11 = document.getElementById("number-list-question-11");
+    if (numberQuestion11 < 0) {
+        resultQuestion11.innerHTML = "Número inválido";
+    }
+    else {
+        output = "";
+        for (let i = 1; i <= 10; i++) {
+            output += `${numberQuestion11} x ${i} = ${numberQuestion11 * i}<br>`;
+        }
+        resultQuestion11.innerHTML = `Esta é a tabuada do ${numberQuestion11}: `;
+        numberListQuestion11.innerHTML = output;
+    }
+}
