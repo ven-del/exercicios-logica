@@ -3,4 +3,4 @@ function teste() {
     teste.innerHTML = "Testado com sucesso";
 }
 
-teste ();
+teste();
