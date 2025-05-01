@@ -195,3 +195,25 @@ function printMultiplicationTable() {
         numberListQuestion11.innerHTML = output;
     }
 }
+
+function calculateAverage() {
+    console.log("Digite um número para adicionar ao cálculo da média ou digite 0 para encerrar");
+    let number = 1;
+    let sum = 0;
+    let count = 0;
+    
+    while (number != 0) {
+        number = Number(prompt("Digite um número: "));
+        if (number != 0) {
+            sum += number;
+            count++;
+        }
+    }
+    
+    if (count > 0) {
+        const average = sum / count;
+        console.log(`Foi um total de ${count} números inseridos e sua média é: ${average.toFixed(2)}`);
+    } else {
+        console.log("Nenhum número foi inserido para calcular a média");
+    }
+}
