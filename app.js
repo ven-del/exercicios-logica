@@ -217,3 +217,18 @@ function calculateAverage() {
         console.log("Nenhum número foi inserido para calcular a média");
     }
 }
+
+function calculateFactorial() {
+    const numberQuestion13 = Number(document.getElementById("number-question-13").value);
+    const resultQuestion13 = document.getElementById("result-question-13");
+    let factorial = 1;
+    if (numberQuestion13 < 0) {
+        resultQuestion13.innerHTML = "Número inválido";
+    }
+    else {
+        for (let i = 1; i <= numberQuestion13; i++) {
+            factorial *= i;
+        }
+        resultQuestion13.innerHTML = `O fatorial de ${numberQuestion13} é ${factorial}`;
+    }
+}
